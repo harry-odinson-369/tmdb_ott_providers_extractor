@@ -11,6 +11,8 @@ import 'package:tmdb_ott_providers_extractor/constants/urls.dart';
 import 'package:tmdb_ott_providers_extractor/models/ott_provider.dart';
 import 'package:tmdb_ott_providers_extractor/services/extractor.dart';
 
+export 'package:tmdb_ott_providers_extractor/services/launcher.dart';
+
 class TMDbOTTProvidersExtractor {
   static Future<List<OTTProviderModel>> extract(String id, String type, String locale) async {
     Uri uri = Uri.parse(
