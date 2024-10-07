@@ -26,7 +26,7 @@ class LauncherService {
       }
     }
 
-    await launchUrl(Uri.parse(response.headers[HttpHeaders.locationHeader] as String? ?? uri.toString()));
+    launchUrl(Uri.parse(response.headers[HttpHeaders.locationHeader] as String? ?? uri.toString()));
 
     return;
   }
