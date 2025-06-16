@@ -7,7 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 class LauncherService {
 
   ///[directLink] is the link from [OTTProviderItemModel] link property.
-  static Future launchRedirectLink(String directLink) async {
+  static Future launchRedirectLink(String directLink, [LaunchMode launchMode = LaunchMode.platformDefault]) async {
     var uri = Uri.parse(directLink);
 
     var client = HttpClient();
@@ -26,7 +26,7 @@ class LauncherService {
       }
     }
 
-    launchUrl(Uri.parse(response.headers[HttpHeaders.locationHeader] as String? ?? uri.toString()));
+    launchUrl(Uri.parse(response.headers[HttpHeaders.locationHeader] as String? ?? uri.toString()), mode: launchMode);
 
     return;
   }
