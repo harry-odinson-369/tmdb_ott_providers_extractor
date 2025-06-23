@@ -1,4 +1,4 @@
-import 'package:flutter_test/flutter_test.dart';
+// ignore_for_file: avoid_print
 
 import 'package:tmdb_ott_providers_extractor/tmdb_ott_providers_extractor.dart';
 
